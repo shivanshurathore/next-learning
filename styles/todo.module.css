@@ -1,0 +1,103 @@
+.container {
+  width: 500px;
+}
+
+.inputBox {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.todoTable {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  padding: 0.5rem 0.25rem;
+}
+
+.deleteIcon {
+  color: red;
+  cursor: pointer;
+  display: none !important;
+}
+
+.filterLink {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  list-style-type: none;
+  margin: 1rem 0;
+}
+
+.activeLink {
+  font-weight: bolder;
+}
+
+.normalLink {
+  font-weight: normal;
+}
+
+.flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.selectAllIcon {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.todoCheckbox {
+  margin-left: 1rem;
+}
+
+.clearSelected {
+  background-color: "grey";
+  padding: "0.5rem";
+  color: "white";
+  border-radius: "0.5rem";
+  cursor: "pointer";
+}
+
+.countDiv {
+  margin-top: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.card:hover .deleteIcon {
+  display: inline-block !important;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .card {
+    padding: 1rem 2.5rem;
+  }
+}
